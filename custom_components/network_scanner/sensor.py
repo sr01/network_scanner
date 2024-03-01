@@ -103,7 +103,7 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
     _LOGGER.info("mac_mapping_1: %s", config_entry.data.get("mac_mapping_1"))
     mac_mappings = "\n".join(
         config_entry.data.get(f"mac_mapping_{i+1}", "")
-        for i in range(25)
+        for i in range(255)
         if config_entry.data.get(f"mac_mapping_{i+1}")
     )
     _LOGGER.debug("mac_mappings: %s", mac_mappings)

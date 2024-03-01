@@ -27,7 +27,7 @@ class NetworkScannerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         }
 
         # Add mac mappings with values from YAML if available
-        for i in range(25):
+        for i in range(255):
             key = f"mac_mapping_{i+1}"
             if key in yaml_config:
                 _LOGGER.debug("YAML Config key: %s", yaml_config.get(key))
